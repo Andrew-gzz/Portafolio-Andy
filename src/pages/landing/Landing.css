@@ -1,0 +1,45 @@
+.game-card {
+  cursor: pointer;
+}
+
+.game-card-image,
+.game-card-details,
+.game-card-border {
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+
+.game-card-image {
+  transition-property: transform;
+  transition-duration: 700ms;
+}
+
+.game-card-details {
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition-property: opacity, transform;
+}
+
+.game-card-border {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.game-card:hover .game-card-image {
+  transform: scale(1.05);
+}
+
+.game-card:hover .game-card-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.game-card:hover .game-card-border {
+  opacity: 0.2;
+}
+
+@media (max-width: 575.98px) {
+  .game-card {
+    min-height: 340px !important;
+  }
+}
