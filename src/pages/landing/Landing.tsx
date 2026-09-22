@@ -3,75 +3,95 @@ import "./Landing.css";
 const games = [
   {
     id: 1,
-    title: "VOID PROTOCOL",
-    genre: "Sci-Fi Action RPG",
-    year: "2024",
-    engine: "Unity",
-    role: "Lead Developer",
+    title: "Purrrge Crusade",
+    genre: "Multiplayer Online, Shotter, Fantasy, Cats ",
+    year: "2026",
+    engine: "Unreal 5",
+    role: "Lider Desarrollador",
     description:
-      "Core combat systems and procedural dungeon generation for a dystopian RPG where humanity's last AI systems wage war across fractured server-worlds.",
-    image:
-      "https://images.unsplash.com/photo-1536768311822-a83af8cee62d?w=1400&h=700&fit=crop&auto=format",
-    tags: ["Unity", "C#", "Procedural Gen", "Multiplayer"],
+      "Desarrollo de sistema de combate, mecanicas principales y desarrollo para multijugador con servidores de steam",
+    image: "src/assets/PurrgeCrusade.webp",
+    tags: ["Unreal Engine", "Blueprints", "C#", "Multiplayer"],
   },
   {
     id: 2,
-    title: "NEON SIEGE",
-    genre: "Cyberpunk Tower Defense",
-    year: "2023",
-    engine: "Unreal Engine 5",
-    role: "Gameplay Programmer",
+    title: "VR Experiencie",
+    genre: "VR, Simulation, Experiencie, Soccer",
+    year: "2026",
+    engine: "Unreal 5",
+    role: "Level Design and Experiencie, Mechanics",
     description:
-      "Enemy AI pathfinding via flow fields and a modular tower upgrade system. Shipped to Steam with 12k+ positive reviews.",
-    image:
-      "https://images.unsplash.com/photo-1761845081361-57b8453ce682?w=900&h=700&fit=crop&auto=format",
-    tags: ["Unreal 5", "C++", "AI", "Blueprint"],
+      "Proyecto desarrollado principalmente para VR y un haptico para simular un penalty de futbol",
+    image: "src/assets/VRExperience.webp",
+    tags: ["Unreal 5", "VR", "Haptico", "Blueprint", "Simulador"],
   },
   {
     id: 3,
-    title: "ABYSSAL DEPTHS",
-    genre: "Underwater Horror",
-    year: "2023",
-    engine: "Godot 4",
-    role: "Solo Developer",
+    title: "Tickets Now",
+    genre: "Shotter, Simulation, WorldCup",
+    year: "2025",
+    engine: "Unreal 5",
+    role: "Mechanics, AI developer",
     description:
-      "Solo horror experience 11,000 meters below the surface. Custom water shaders, procedural ambient audio, and tension-driven level design.",
-    image:
-      "https://images.unsplash.com/photo-1703057642023-b6a60a5dfb8b?w=900&h=700&fit=crop&auto=format",
-    tags: ["Godot 4", "GDScript", "Shader", "Solo"],
+      "Tickets Now es un juego de simulador de guardia de seguridad en un estadio, deberas atender aficionados y revisar que todo este en orden.",
+    image: "src/assets/Tickets_Now.webp",
+    tags: ["Unreal Engine 5", "IA", "Simulador", "Shotter"],
   },
   {
     id: 4,
-    title: "THE LAST MERIDIAN",
-    genre: "Open World RPG",
-    year: "2022",
-    engine: "Unity",
-    role: "Systems Designer",
+    title: "Across the Stars",
+    genre: "Runner, Web, Multiplayer Online, PC",
+    year: "2025",
+    engine: "Three.js",
+    role: "Level Design",
     description:
-      "Branching quest architecture and faction reputation economy for an open-world set in a civilization frozen mid-collapse.",
-    image:
-      "https://images.unsplash.com/photo-1508925831690-f33f79533e7c?w=700&h=1000&fit=crop&auto=format",
-    tags: ["Unity", "Systems Design", "Narrative"],
+      "Across the Stars es un juego Runner multijugador que consiste en llegar a la meta lo mas rapido que puedas viajando entre niveles cada vez mas dificiles",
+    image: "src/assets/Across_the_Stars.webp",
+    tags: ["Three.js", "Multiplayer", "Web", "3D"],
   },
   {
     id: 5,
-    title: "CIRCUIT BREAKER",
-    genre: "Action Platformer",
-    year: "2022",
-    engine: "Unreal Engine 5",
-    role: "Level Designer",
+    title: "Potion Frency",
+    genre: "Fanstasia, Crafting, Cozy Game ",
+    year: "2025",
+    engine: "DirectX",
+    role: "Lead Developer",
     description:
-      "24 precision platformer levels inside a collapsing power grid - escalating mechanical complexity with optimized speed-run routing.",
-    image:
-      "https://images.unsplash.com/photo-1597839219216-a773cb2473e4?w=1400&h=700&fit=crop&auto=format",
-    tags: ["Unreal 5", "Level Design", "Blueprint"],
+      "Potion Frency es un juego sencillo desarrollado enteramente con Direct X, eres un mago intentando realizar una pociones, recolecta las correctas para ganar.",
+    image: "src/assets/Potion_Frenzy.webp",
+    tags: ["DirectX", "Shaders propios", "C++", "Cozy"],
   },
 ];
-
+const skills = [
+  {
+    category: "MOTORES GRAFICOS",
+    items: ["Unity 6", "Unreal Engine 5", "Three.js"],
+  },
+  {
+    category: "LENGUAJES",
+    items: ["C#", "C++", "BLUEPRINTS", "HLSL / GLSL"],
+  },
+  {
+    category: "DISCIPLINAS",
+    items: [
+      "Gameplay Programming",
+      "Systems Design",
+      "Level Design",
+      "Shader Development",
+    ],
+  },
+  {
+    category: "HERRAMIENTAS",
+    items: ["Git ", "Affinity", "Blender", "Filmora"],
+  },
+];
 function Landing() {
   return (
     <>
-      <section className="position-relative d-flex align-items-end py-5 overflow-hidden">
+      <section
+        id="Hero"
+        className="position-relative d-flex align-items-end py-5 overflow-hidden"
+      >
         <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark">
           <img
             src="https://images.unsplash.com/photo-1733412505442-36cfa59a4240?w=1920&h=1080&fit=crop&auto=format"
@@ -132,7 +152,7 @@ function Landing() {
               className="small text-secondary lh-lg mb-0"
               style={{ maxWidth: "20rem" }}
             >
-              4 anos desarrollando juegos en Unity, Unreal and Three.js - desde
+              4 años desarrollando juegos en Unity, Unreal and Three.js - desde
               sistema de combates y mecanicas de juego.
             </p>
             <div className="d-flex gap-3 flex-shrink-0">
@@ -173,7 +193,7 @@ function Landing() {
               letterSpacing: "0.35em",
             }}
           >
-            01 - Selected Works
+            01 - Mis ultimos trabajos
           </span>
           <h2
             className="text-white mb-0"
@@ -183,7 +203,7 @@ function Landing() {
               letterSpacing: "0.02em",
             }}
           >
-            PROJECTS
+            PROYECTOS
           </h2>
         </div>
 
@@ -199,11 +219,141 @@ function Landing() {
               <GameCard game={games[2]} height="380px" />
             </div>
             <div className="col-12 col-lg-4">
-              <GameCard game={games[3]} height="420px" />
-            </div>
-            <div className="col-12 col-lg-8">
               <GameCard game={games[4]} height="420px" />
             </div>
+            <div className="col-12 col-lg-8">
+              <GameCard game={games[3]} height="420px" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sobremi" className="py-5">
+        <div className="container-xxl px-4 px-lg-5 mb-5">
+          <div className="row">
+            <div className="col-7">
+              <span
+                className="d-block text-danger text-uppercase fw-semibold mb-1"
+                style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "11px",
+                  letterSpacing: "0.35em",
+                }}
+              >
+                02 - Sobre mí
+              </span>
+              <h2
+                className="text-white mb-0"
+                style={{
+                  fontFamily: "'Anton', sans-serif",
+                  fontSize: "clamp(36px, 5vw, 60px)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                EL DESARROLLADOR <br /> DETRÁS <br /> DE LOS JUEGOS
+              </h2>
+              <div className="d-flex flex-lg-column align-items-start align-items-sm-center">
+                <p className="small text-secondary">
+                  Soy un desarrollador con 4 años de experiencia desarrollando
+                  videojuegos en diversas plataformas y diversos generos. Me
+                  enfoco en desarrollo en el gameplay, diseño de sitemas y
+                  arquitectura de nivel.
+                </p>
+                <p className="small text-secondary">
+                  Comenze con el desarrollo de videojuegos entrando a la Mini
+                  Game work JAM usando Unity y de ahi no paré, segui
+                  desarrollando y me especialice mas en Unreal Engine 5 usando
+                  blueprint con un enfoque a diseño de mecanicas y diseño de
+                  gameplay.
+                </p>
+              </div>
+              <div className="d-flex flex-row gap-5 border-top border-opacity-25 pt-4 mt-4">
+                {[
+                  { value: "4+", label: "Años de Exp." },
+                  { value: "3", label: "Motores Gráficos" },
+                ].map(({ value, label }) => (
+                  <div key={label}>
+                    <div
+                      className="display-5 text-danger lh-1"
+                      style={{ fontFamily: "'Anton', sans-serif" }}
+                    >
+                      {value}
+                    </div>
+                    <div
+                      className="small text-light text-uppercase mt-2"
+                      style={{
+                        fontFamily: "'Barlow Condensed', sans-serif",
+                        letterSpacing: "0.25em",
+                      }}
+                    >
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="col-5 text-light">
+              <img
+                src="https://images.unsplash.com/photo-1733412505442-36cfa59a4240?w=1920&h=1080&fit=crop&auto=format"
+                alt="Imagen de Andy"
+                className="w-100 h-100 object-fit-cover"
+              ></img>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="habilidades" className="py-5">
+        <div className="container-xxl px-4 px-lg-5">
+          <div className="mb-5">
+            <span
+              className="d-block text-danger text-uppercase fw-semibold mb-1"
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "11px",
+                letterSpacing: "0.35em",
+              }}
+            >
+              03 - Habilidades
+            </span>
+            <h2
+              className="text-white mb-0"
+              style={{
+                fontFamily: "'Anton', sans-serif",
+                fontSize: "clamp(36px, 5vw, 60px)",
+                letterSpacing: "0.02em",
+              }}
+            >
+              HERRAMIENTAS Y DESARROLLO
+            </h2>
+          </div>
+
+          <div className="row g-0">
+            {skills.map(({ category, items }) => (
+              <div key={category} className="col-12 col-sm-6 col-lg-3">
+                <div className="h-100 p-4 p-lg-5">
+                  <h3
+                    className="text-danger text-uppercase fw-semibold mb-4"
+                    style={{
+                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontSize: "11px",
+                      letterSpacing: "0.3em",
+                    }}
+                  >
+                    {category}
+                  </h3>
+                  <ul className="list-unstyled d-grid gap-3 mb-0">
+                    {items.map((item) => (
+                      <li
+                        key={item}
+                        className="skill-item d-flex align-items-center gap-3"
+                      >
+                        <span className="skill-dot flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

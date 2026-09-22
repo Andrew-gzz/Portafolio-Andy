@@ -19,16 +19,20 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav ms-auto">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="#projects"
+              >
                 Proyectos
               </a>
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#sobremi">
                 Sobre mi
               </a>
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#habilidades">
                 Habilidades
               </a>
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#contacto">
                 Contacto
               </a>
             </div>

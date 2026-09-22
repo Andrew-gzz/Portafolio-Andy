@@ -38,6 +38,37 @@
   opacity: 0.2;
 }
 
+.skills-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.skills-grid {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.skill-item {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.875rem;
+  transition: color 200ms ease;
+}
+
+.skill-item:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.skill-dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: rgba(220, 53, 69, 0.55);
+  border-radius: 50%;
+  transition: background-color 200ms ease;
+}
+
+.skill-item:hover .skill-dot {
+  background-color: #dc3545;
+}
+
 @media (max-width: 575.98px) {
   .game-card {
     min-height: 340px !important;
