@@ -2,6 +2,39 @@
   cursor: pointer;
 }
 
+.language-toggle {
+  width: 4.25rem;
+  min-height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  color: #fff;
+  background-color: rgba(220, 53, 69, 0.18);
+  border-color: rgba(220, 53, 69, 0.75);
+}
+
+.language-toggle:focus-visible {
+  outline: 2px solid rgba(220, 53, 69, 0.45);
+  outline-offset: 3px;
+}
+
 .game-card-image,
 .game-card-details,
 .game-card-border {
