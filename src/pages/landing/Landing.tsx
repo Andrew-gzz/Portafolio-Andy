@@ -129,7 +129,10 @@ function Landing() {
         <div className="container-xxl px-4 px-lg-5">
           <div className="row g-2 g-lg-3">
             <div className="col-12">
-              <GameCard game={featuredGame} height="clamp(380px, 48vw, 520px)" />
+              <GameCard
+                game={featuredGame}
+                height="clamp(380px, 48vw, 520px)"
+              />
             </div>
             <div className="col-12 col-lg-7">
               <GameCard game={secondGame} height="380px" />
@@ -147,10 +150,10 @@ function Landing() {
         </div>
       </section>
 
-      <section id="sobremi" className="py-5">
+      <section id="sobremi" className="py-5 about-section">
         <div className="container-xxl px-4 px-lg-5 mb-5">
-          <div className="row">
-            <div className="col-7">
+          <div className="row g-4 g-lg-5 align-items-stretch">
+            <div className="col-12 col-lg-7">
               <span
                 className="d-block text-danger text-uppercase fw-semibold mb-1 font-barlow"
                 style={{
@@ -171,14 +174,17 @@ function Landing() {
               >
                 {t.about.title}
               </h2>
-              <div className="d-flex flex-lg-column align-items-start align-items-sm-center">
+              <div className="about-copy d-flex flex-column align-items-start mt-4">
                 {t.about.paragraphs.map((paragraph) => (
-                  <p key={paragraph} className="small text-secondary font-inter">
+                  <p
+                    key={paragraph}
+                    className="small text-secondary font-inter"
+                  >
                     {paragraph}
                   </p>
                 ))}
               </div>
-              <div className="d-flex flex-row gap-5 border-top border-opacity-25 pt-4 mt-4">
+              <div className="about-stats d-flex flex-row gap-5 border-top border-opacity-25 pt-4 mt-4">
                 {t.about.stats.map(({ value, label }) => (
                   <div key={label}>
                     <div
@@ -200,11 +206,11 @@ function Landing() {
                 ))}
               </div>
             </div>
-            <div className="col-5 text-light">
+            <div className="col-12 col-lg-5 text-light">
               <img
                 src="https://images.unsplash.com/photo-1733412505442-36cfa59a4240?w=1920&h=1080&fit=crop&auto=format"
                 alt={t.about.imageAlt}
-                className="w-100 h-100 object-fit-cover"
+                className="about-image w-100 h-100 object-fit-cover"
               />
             </div>
           </div>
@@ -268,10 +274,10 @@ function Landing() {
         </div>
       </section>
 
-      <section id="contacto" className="py-5">
+      <section id="contacto" className="py-5 contact-section">
         <div className="container-xxl px-4 px-lg-5 mb-5">
-          <div className="row">
-            <div className="col-7">
+          <div className="row g-4 g-lg-3 align-items-start">
+            <div className="col-12 col-lg-7">
               <span
                 className="d-block text-danger text-uppercase fw-semibold mb-1 font-barlow"
                 style={{
@@ -292,16 +298,22 @@ function Landing() {
               >
                 {t.contact.title}
               </h2>
-              <div className="d-flex flex-lg-column align-items-start align-items-sm-center">
+              <div className="contact-copy d-flex flex-column align-items-start mt-4">
                 {t.contact.paragraphs.map((paragraph) => (
-                  <p key={paragraph} className="small text-secondary font-inter">
+                  <p
+                    key={paragraph}
+                    className="small text-secondary font-inter"
+                  >
                     {paragraph}
                   </p>
                 ))}
               </div>
             </div>
-            <div className="col-6 d-flex gap-3 justify-content-start">
-              <button type="button" className="btn btn-danger font-anton text-uppercase">
+            <div className="contact-actions col-12 col-lg-6 d-flex gap-3 justify-content-start justify-content-lg-start">
+              <button
+                type="button"
+                className="btn btn-danger font-anton text-uppercase"
+              >
                 {t.contact.emailCta}
               </button>
               <button
